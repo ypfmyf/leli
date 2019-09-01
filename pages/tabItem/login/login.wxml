@@ -1,0 +1,10 @@
+ <view class='baseContainerS' style="height:{{height}}px">
+     <view class="SYS_content">
+          <view class="Sys_title">您还没有加入乐黎体育</view>
+          <view class="Sys_title">请授权登录</view>
+          <view class="Sys_image">
+              <!-- <image src=""></image> -->
+          </view>
+          <button  open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="Sys_button" >登录</button>
+     </view>
+</view>

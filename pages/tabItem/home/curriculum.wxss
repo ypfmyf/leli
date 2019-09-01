@@ -1,0 +1,31 @@
+.curriculumList{
+  width:100%;
+  background:#fff;
+  margin-top:20rpx;
+  padding:20rpx 0;
+}
+.List{
+  width:95%;
+  /* margin-left:2.5%; */
+  display: flex;
+  margin:20rpx 2.5%;
+  font-size:32rpx;
+}
+.list_left{
+    width:200rpx;
+    display: flex;
+    flex-direction: column;
+}
+.list_right{
+  margin-left:20rpx;
+  font-size:30rpx;
+  margin-top:10rpx;
+}
+.name_bottom{
+  /* height:60rpx; */
+  margin-bottom:20rpx;
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

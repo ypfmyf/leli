@@ -1,0 +1,101 @@
+<view class="baseContainer"  style='width:{{width}}px;' wx:if="{{loaded}}">
+    <!-- <view class='gradientsContainer fw'  style='height:200rpx' id="topY">
+      <view class="vc">
+          <view  style='width:120rpx;height:120rpx;border-radius:50%;'>
+              <image class='avatar'  src="{{photo}}" bindtap='_getUserInfo'></image>
+          </view>
+          <label style="color:#fff;font-size:32rpx;margin-top:15rpx;">{{name}}</label>
+      </view>
+    </view> -->
+    <view class="index_top" id="topY">
+        <view class="gradientsContainer"></view>
+        <view class="contet_list">
+            <view class="contet_list_left">
+                <view class="list_image">
+                   <image class='avatar'  src="{{photo}}"></image>
+                </view>
+                <view class="list_name">
+                   <label style="font-size:30rpx;">{{name}}</label>
+                </view>
+            </view>
+             <view class="contet_list_right">
+                 <view class="right_image">
+                    <image src="../../imgs/love.png" style="width:250rpx;height:60rpx;margin-right:0rpx;"></image>
+                 </view>
+                 <view style="font-size:26rpx;text-align: right; margin-bottom:20rpx;">
+                    <view>
+                       <label>{{msg_top01}}</label>
+                    </view>
+                    <view>
+                       <label>{{msg_top02}}</label>
+                    </view>
+                 
+                 </view>
+            
+            </view>
+        
+        </view>
+    </view>
+
+
+    <scroll-view scroll-y upper-threshold='0' style="height:{{height-topHeight-10}}px;margin-top:20rpx;">
+       <block wx:for="{{booklist}}" wx:key="index">
+        <!-- <view class="List">
+            <view class="vc listFlex" >
+                <view>{{item.date}}</view>
+                <view  style="margin-top:20rpx;">{{item.time}}</view>
+            </view>
+            <view class="vc listFlex">
+                <view >{{item.coursename1}}</view>
+                <view>{{item.coursename2}}</view>
+            </view>
+            <view class="vc" style="justify-content: center;">
+               <image src="{{item.eventspic}}" style="width:80rpx;height:80rpx;"></image>
+            </view>
+            <view class="vc listFlex">
+                <view class="but"  style="background:#00B1F1;" wx:if="{{item.status==1}}"><label>已报名</label></view>
+                   <form bindsubmit="_signClcik02" report-submit="true"  wx:if="{{item.status==1}}" >
+                            <button form-type="submit" class='but buttonA actionBtn' style='background:#FFC100;margin-top:20rpx;' 
+                            data-id="{{item.courseid}}">取消报名</button>
+                  </form>   
+                 <form bindsubmit="_signClcik01" report-submit="true"  wx:if="{{item.status==2}}">
+                      <button form-type="submit" class='but buttonA actionBtn' style='background-color:#92D050' data-id="{{item.courseid}}">可报名</button>
+                   </form>
+                 <view class="but"  style="background:#002060;margin-top:20rpx;" wx:if="{{item.status==2}}"><label>已通知</label></view>
+                   <view class="but"  style="background:#FF0000;" wx:if="{{item.status==3}}"><label>人数已满</label></view>
+                 <view class="but"  style="background:#002060;margin-top:20rpx;" wx:if="{{item.status==3}}"><label>已排队</label></view>
+            </view>
+        </view> -->
+         <view  style="width:95%;margin-left:2.5%;margin-bottom:20rpx;">
+              <view  class="boxSizing cardContainer List" style="margin:0px;margin-top:10rpx;overflow:visible;width:100%;padding:0px;">
+                      <view class="hc" style="margin-left:20rpx;margin-right:20rpx;flex:1;">
+                          <form bindsubmit="_book02" report-submit="true" style="flex:1;">
+                              <button form-type="submit" class="hc" data-id='{{item.courseid}}' hover-class="none">
+                                      <view class="vc listFlex" style=" font-size:32rpx;">
+                                          <view>{{item.date}}</view>
+                                          <view style="margin-top:10rpx;">{{item.time}}</view>
+                                      </view>
+                                      <view class="vc listFlex" style=" font-size:32rpx;">
+                                          <view >{{item.coursename1}}</view>
+                                          <view style="margin-top:10rpx;">{{item.coursename2}}</view>
+                                      </view>
+                                      <view class="vc" style="justify-content: center;">
+                                        <image src="{{item.eventspic}}" style="width:80rpx;height:80rpx;"></image>
+                                      </view>
+                              </button>
+                          </form>
+                        
+                      </view>
+                      <view class="vc" style="align-items: center;justify-content: center;margin-right:20rpx;">
+                              <view class="but" wx:if="{{item.status==1}}"><label>已报名</label></view>
+                                <form bindsubmit="_signClcik02" report-submit="true"  wx:if="{{item.status==1}}" >
+                                          <button form-type="submit" class='but buttonA actionBtn' style='background:#fff;color:#000;margin-top:20rpx;' 
+                                          data-id="{{item.courseid}}">取消报名</button>
+                                </form>   
+                              <view class="but" wx:if="{{item.status==2}}"><label>课程取消</label></view>
+                      </view>
+               </view>
+            </view>
+       </block>
+     </scroll-view>
+</view>

@@ -1,0 +1,68 @@
+<view class="baseContainer"  style='width:{{width}}px;' wx:if="{{loaded}}">
+    <!-- <view class='gradientsContainer fw'  style='height:200rpx' id="topY">
+      <view class="vc">
+          <view  style='width:120rpx;height:120rpx;border-radius:50%;'>
+              <image class='avatar'  src="{{photo}}" bindtap='_getUserInfo'></image>
+          </view>
+          <label style="color:#fff;font-size:32rpx;margin-top:15rpx;">{{name}}</label>
+      </view>
+    </view> -->
+    <view class="index_top" id="topY">
+        <view class="gradientsContainer"></view>
+        <view class="contet_list">
+            <view class="contet_list_left">
+                <view class="list_image">
+                   <image class='avatar'  src="{{photo}}"></image>
+                </view>
+                <view class="list_name">
+                   <label style="font-size:30rpx;">{{name}}</label>
+                </view>
+            </view>
+             <view class="contet_list_right">
+                 <view class="right_image">
+                    <image src="../../imgs/love.png" style="width:250rpx;height:60rpx;margin-right:0rpx;"></image>
+                 </view>
+                 <view style="font-size:26rpx;text-align: right; margin-bottom:20rpx;">
+                    <view>
+                       <label>{{msg_top01}}</label>
+                    </view>
+                    <view>
+                       <label>{{msg_top02}}</label>
+                    </view>
+                 
+                 </view>
+            
+            </view>
+        
+        </view>
+    </view>
+
+    <!-- <scroll-view scroll-y upper-threshold='0' style="height:{{height-topHeight}}px"> -->
+          <view>
+              <view class="hc" style="margin-top:40rpx;width:95%;margin-left:2.5%;">
+                  <view style="font-size:34rpx;flex:0 0 30%;text-align: right" >敢问如何称呼</view>
+                  <view class="inputText">
+                     <input type="text" style='margin-left:10rpx;font-size:30rpx;' bindinput='inputChange01'></input> 
+                  </view>     
+              </view>
+              <view class="hc" style="margin-top:40rpx;width:95%;margin-left:2.5%;">
+                  <view style="font-size:34rpx;flex:0 0 30%;text-align: right" >留下手机可否</view>
+                  <view class="inputText">
+                     <input type="number" style='margin-left:10rpx;font-size:30rpx;' bindinput='inputChange02'></input> 
+                  </view>     
+              </view>
+               <view style="margin-top:40rpx;width:95%;margin-left:2.5%; display: flex;">
+                  <view style="font-size:34rpx;flex:0 0 30%;text-align: right;margin-top:20rpx;" >咨询还是建议</view>
+               <view style="margin-left:40rpx;flex:1;">
+                     <textarea  placeholder="请输入" style="width:100%;border:2rpx solid #000;height:250rpx;font-size:30rpx;" maxlength="800" bindinput='textareaChange' ></textarea>
+                </view>   
+              </view>
+              <view style="width:100%;display: flex;align-items: center;justify-content:center;margin-top:50rpx;">
+                   <view class="but" bindtap='_click'>
+                     <label>提交</label>
+                   </view>
+                </view>  
+               
+          </view>
+     <!-- </scroll-view> -->
+</view>

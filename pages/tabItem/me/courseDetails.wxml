@@ -1,0 +1,86 @@
+<view class="baseContainer"  style='width:{{width}}px;' wx:if="{{loaded}}">
+    <!-- <view class='gradientsContainer fw'  style='height:200rpx' id="topY">
+      <view class="vc">
+          <view  style='width:120rpx;height:120rpx;border-radius:50%;'>
+              <image class='avatar'  src="{{photo}}" bindtap='_getUserInfo'></image>
+          </view>
+          <label style="color:#fff;font-size:32rpx;margin-top:15rpx;">{{name}}</label>
+      </view>
+    </view> -->
+    <view class="index_top" id="topY">
+        <view class="gradientsContainer"></view>
+        <view class="contet_list">
+            <view class="contet_list_left">
+                <view class="list_image">
+                   <image class='avatar'  src="{{photo}}"></image>
+                </view>
+                <view class="list_name">
+                   <label style="font-size:30rpx;">{{name}}</label>
+                </view>
+            </view>
+             <view class="contet_list_right">
+                 <view class="right_image">
+                    <image src="../../imgs/love.png" style="width:250rpx;height:60rpx;margin-right:0rpx;"></image>
+                 </view>
+                 <view style="font-size:26rpx;text-align: right; margin-bottom:20rpx;">
+                    <view>
+                       <label>{{msg_top01}}</label>
+                    </view>
+                    <view>
+                       <label>{{msg_top02}}</label>
+                    </view>
+                 
+                 </view>
+            
+            </view>
+        
+        </view>
+    </view>
+
+    <scroll-view scroll-y upper-threshold='0' style="height:{{height-topHeight}}px">
+        <view class="List">
+            <view class="vc listFlex">
+                <view>{{courseinfo.date}}</view>
+                <view style="margin-top:10rpx;">{{courseinfo.time}}</view>
+            </view>
+            <view class="vc listFlex">
+                <view >{{courseinfo.coursename1}}</view>
+                <view style="margin-top:10rpx;">{{courseinfo.coursename2}}</view>
+            </view>
+             <!-- style="justify-content: center;width:120rpx;margin-right:15rpx;" -->
+            <view class="vc listFlex" >
+               <image src="{{courseinfo.eventspic}}" style="width:80rpx;height:80rpx;"></image>
+            </view>
+             <!-- <view class="vc"  style="justify-content: center;width:150rpx;margin-right:15rpx;">
+               <image src="{{courseinfo.gympic}}" style="width:120rpx;height:120rpx;"></image>
+            </view> -->
+        </view>
+         <view class="list_top">
+            <view
+             style="width:90%;margin-left:5%; display: flex;flex-direction: column;margin-top:20rpx;padding:20rpx 0;">
+              <block>
+               <label style="paddin-top:20rpx;font-size:30rpx;">{{courseinfo.msg1}}</label>
+               <label style="padding-top:20rpx;font-size:30rpx;">{{courseinfo.msg2}}</label>
+              </block>
+            </view>
+        </view>
+        <view class="list_top">
+            <view
+             style="width:90%;margin-left:5%; display: flex;flex-direction: column;margin-top:20rpx;padding:20rpx 0;">
+              <block>
+               <label style="paddin-top:20rpx;font-size:30rpx;">{{courseinfo.msg3}}</label>
+               <label style="padding-top:20rpx;font-size:30rpx;">{{courseinfo.booktext}}</label>
+              </block>
+            </view>
+        </view>
+         <view class="list_top">
+            <view
+             style="width:90%;margin-left:5%; display: flex;flex-direction: column;margin-top:20rpx;padding:20rpx 0;">
+              <block>
+               <label style="paddin-top:20rpx;font-size:30rpx;">{{courseinfo.msg4}}</label>
+               <label style="padding-top:20rpx;font-size:30rpx;">{{courseinfo.signtext}}</label>
+              </block>
+            </view>
+        </view>
+     </scroll-view>
+</view>

@@ -1,0 +1,35 @@
+.baseContainerS{
+  background:#E2F2FF;
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.Sys_title{
+  font-size:39rpx;
+  color:#3996E2;
+  font-weight:bold;
+  text-align: center;
+  /* margin:10rpx; */
+}
+.Sys_image{
+  width:100%;
+  height:150rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* .Sys_image image{
+  width:220rpx;
+  height:280rpx;
+} */
+.Sys_button{
+  width:100%;
+  height:80rpx;
+  line-height:80rpx;
+  text-align: center;
+  color:#fff;
+  font-size:32tpx;
+  border-radius:10rpx;
+  background:linear-gradient(to right, #2B8AD8, #62B8FF);
+}

@@ -1,0 +1,48 @@
+<view class="baseContainer">
+  <block wx:for="{{eventsinfo}}" wx:key="index">
+   <!-- <view class="curriculumList">
+      <view class="List">
+            <view class="list_left">
+                <view style="border-radius:10rpx;">
+                  <image src="{{item.photo}}" style="width:200rpx;height:200rpx;"></image>
+                </view>
+                <view class="name_bottom">
+                    <label style="36rpx">{{item.name}}</label>
+                </view>
+            </view>
+            <view class="list_right">
+                <scroll-view scroll-y upper-threshold='0'
+                 style='height:269.6rpx;background:#fff;'>
+                  <view style="font-size:34rpx;">{{item.info}}</view>
+                </scroll-view>
+            </view>
+        
+        </view>
+   </view> -->
+   <view  style="width:95%;margin-left:2.5%;margin-top:20rpx;">
+    <view  class="boxSizing cardContainer" style="margin:0px;margin-top:10rpx;overflow:visible;width:100%;padding:0px;">
+         <view class="List">
+            <view class="list_left">
+                <view style="border-radius:10rpx;" style="width:200rpx;height:200rpx;display: flex;align-items: center; justify-content: center;">
+                  <image src="{{item.photo}}" style="width:160rpx;height:170rpx;"></image>
+                </view>
+                <view class="name_bottom">
+                    <label style="font-size:30rpx;color:#c00000;">{{item.name}}</label>
+                </view>
+            </view>
+            <view class="list_right">
+                <scroll-view scroll-y upper-threshold='0'
+                 style='height:240rpx;background:#fff;'>
+                  <view style="font-size:24rpx;">{{item.info}}</view>
+                </scroll-view>
+            </view>
+        
+        </view>
+   </view>
+   </view>
+</block>
+  
+     
+
+
+</view>

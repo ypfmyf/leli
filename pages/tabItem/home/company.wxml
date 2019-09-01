@@ -1,0 +1,29 @@
+<view class="baseContainer">
+  <!-- 头部广告轮播 -->
+  <view id="swiperH">
+    <swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" class="swiper-item">
+      <block wx:for="{{dataList}}" wx:key="index">
+        <swiper-item>
+          <image src="{{item}}" class="slide-image"  bindtap="viewImage" data-src="{{item}}" data-index="{{index}}"/>
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+  <view class="companyCon" style='background:#fff;'>
+  <view style="width:100%;padding-top:40rpx;"> 
+         <scroll-view scroll-y upper-threshold='0'
+          style="height:{{height-swiperHeight-35}}px;">
+        <view style="width:90%;margin-left:5%;">
+             <view style=" text-align: center;font-size:32rpx;font-weight:bold;">上海乐黎体育管理有限公司</view>
+             <!-- <label style="font-size:36rpx;">{{corp.info}}</label> -->
+             <import src="../../../wxParse/wxParse.wxml"/> 
+             <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+        </view>
+      </scroll-view>
+  
+  </view>
+   
+  
+  </view>
+
+</view>

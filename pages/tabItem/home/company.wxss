@@ -1,0 +1,14 @@
+.swiper-item {
+  display: block;
+  height:500rpx;
+  background:#fff;
+}
+.slide-image {
+  width: 100%;
+  height:500rpx;
+}
+.companyCon{
+  width:100%;
+  margin-top:20rpx;
+ 
+}

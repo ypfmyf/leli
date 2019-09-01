@@ -1,0 +1,22 @@
+<view class='baseContainer' style='width:{{width}}px;min-height:{{height}}px;background-color:#F5F5F5'>
+  <view class="code">
+  
+        <!-- <label class='blueText'>乐黎体育</label>
+        <label class="p2">请授权您的手机号码，以便确认身份</label> -->
+        <view class='love_image'>
+            <image src="../../imgs/love.png" style="width:400rpx;height:160rpx;"></image>
+        </view>
+        <view class="phone">
+          <button open-type="getPhoneNumber" hover-class='none' bindgetphonenumber="login" class='btn' style='background-color:#EFEFEF;'>
+         授权获取手机号
+         </button>
+        </view>
+        <!-- <view class="phone">
+          <label class="p3">手机号</label>
+          <button open-type="getPhoneNumber" hover-class='none' bindgetphonenumber="login" class='btn' style='background-color:#EFEFEF;'>
+         授权获取手机号
+         </button>
+        </view> -->
+  </view>
+
+</view>

@@ -1,0 +1,115 @@
+.index_top{
+   position: relative;
+   top:0rpx;
+   left:0rpx;
+   width:100%;
+   height:280rpx;
+}
+.gradientsContainer {
+  /* background: linear-gradient(to right, #008ecd, #48b8d2); */
+  background: linear-gradient(to right, #BCC1C4, #E3E0DB);
+  position: absolute;
+  top:0rpx;
+  left:0rpx;
+  width:100%;
+  height:280rpx;
+ 
+}
+.contet_list{
+  position: absolute;
+  top:0rpx;
+  left:0rpx;
+  width:100%;
+  height:280rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.contet_list_left .list_image{
+   width:220rpx;
+   height:200rpx;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.contet_list_left .list_name{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.contet_list_right{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-right:20rpx;
+}
+.right_image{
+  display: flex;
+  align-items: center;
+  justify-content:flex-end;
+  margin-top:20rpx;
+}
+.avatar {
+  height:140rpx;
+  width:130rpx;
+  border-radius:50%;
+  overflow: hidden;
+  background-color: gainsboro;
+  border:4rpx solid white;
+}
+
+.menuContainer {
+  /* margin-top: 25px; */
+   margin-top:20rpx;
+  background-color: white; 
+}
+
+.menuContent {
+  justify-content: space-between;
+  height: 60px;
+  margin: 0 10px;
+  border-bottom: 1px solid gainsboro;
+}
+
+.menuContent:last-child {
+  border-bottom: none;
+}
+button::after {
+  border: none;
+}
+input{
+  outline:none;
+  border:none;
+  list-style: none;
+}
+button {
+  width:90%;
+  background-color:none;
+  border-radius:10px;
+  font-size:0px;
+  padding-right:0px;
+  padding-left:0px;
+  text-align:none;
+  line-height:none;
+  position:none;
+  overflow: visible;
+  box-sizing: content-box;
+  color:none;
+  text-decoration: none;
+}
+.positionRe{
+  position: relative;
+}
+.vipImage{
+  position: absolute;
+  top:-10px;
+  left:-2px;
+  width:83px;
+  height:84px;
+}
+.updateClass{
+color:#C6C6C6;
+  font-size:14px;
+  display: inline-block;
+  margin-right:10px;
+}

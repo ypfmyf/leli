@@ -1,0 +1,152 @@
+<view class="baseContainer"  style='width:{{width}}px;' wx:if="{{loaded}}">
+    <!-- <view class='gradientsContainer fw'  style='height:200rpx' id="topY">
+      <view class="vc">
+          <view  style='width:120rpx;height:120rpx;border-radius:50%;'>
+              <image class='avatar'  src="{{photo}}" bindtap='_getUserInfo'></image>
+          </view>
+          <label style="color:#fff;font-size:32rpx;margin-top:15rpx;">{{name}}</label>
+      </view>
+    </view> -->
+     <view class="index_top" id="topY">
+        <view class="gradientsContainer"></view>
+        <view class="contet_list">
+            <view class="contet_list_left">
+                <view class="list_image">
+                   <image class='avatar'  src="{{photo}}"></image>
+                </view>
+                <view class="list_name">
+                   <label style="font-size:30rpx;">{{name}}</label>
+                </view>
+            </view>
+             <view class="contet_list_right">
+                 <view class="right_image">
+                    <image src="../../imgs/love.png" style="width:250rpx;height:60rpx;margin-right:0rpx;"></image>
+                 </view>
+                 <view style="font-size:26rpx;text-align: right; margin-bottom:20rpx;">
+                    <view>
+                       <label>{{msg_top01}}</label>
+                    </view>
+                    <view>
+                       <label>{{msg_top02}}</label>
+                    </view>
+                 
+                 </view>
+            
+            </view>
+        
+        </view>
+    </view>
+    <scroll-view scroll-y upper-threshold='0' style="height:{{height-topHeight}}px">
+        <!-- <view class="list_top">
+            <view
+             style="width:90%;margin-left:5%; display: flex;flex-direction: column;margin-top:20rpx;padding:20rpx 0;">
+              <block>
+               <label style="paddin-top:20rpx;font-size:30rpx;">{{msg1}}</label>
+               <label style="paddin-top:20rpx;font-size:30rpx;">{{msg2}}</label>
+               <label style="paddin-top:20rpx;font-size:30rpx;">{{msg3}}</label>
+              </block>
+            </view>
+        </view> -->
+         <view class="list_top">
+            <view
+             style="width:90%;margin-left:5%; display: flex;flex-direction: column;border:2rpx solid #C00000;">
+               <view class="details_list">
+                    <view>
+                        <label style="font-weight: bold;">统计数据</label>
+                    </view>
+                    <view class="details_image">
+                        <image src="../../imgs/biao07.png" style="width:35rpx;height:35rpx;"></image>
+                        <label style=" display: inline-block;margin-left:20rpx;">任教记录</label>
+                    </view>
+               
+               </view>
+              <view class="course_list">
+                  <view style="flex:1;">
+                      <view class="number">
+                         <label>安排任教</label>
+                      </view>
+                      <view class="number02">
+                        <label>{{msg1}}</label>
+                      </view>
+                  </view>
+                   <view style="flex:1;">
+                      <view class="number">
+                         <label>课程取消</label>
+                      </view>
+                      <view class="number02">
+                        <label>{{msg2}}</label>
+                      </view>
+                  </view>
+                   <view style="flex:1;">
+                      <view class="number"  style="color:#c00000;">
+                         <label>实际任教</label>
+                      </view>
+                      <view class="number02">
+                        <label style="color:#c00000;font-size:30rpx;">{{msg3}}</label>
+                      </view>
+                  </view>
+              
+              </view>
+            </view>
+        </view>
+        <block wx:for="{{courseinfo}}" wx:key="index">
+            <!-- <view class="List">
+                <view class="vc listFlex" >
+                     <view>{{item.date}}</view> 
+                    <view style="margin-top:20rpx;">{{item.time}}</view> 
+                </view>
+                <view class="vc listFlex">
+                    <view>{{item.coursename1}}</view>
+                    <view>{{item.coursename2}}</view>
+                </view>
+                <view class="vc"  style="justify-content: center;">
+                  <image src="{{item.eventspic}}" style="width:80rpx;height:80rpx;"></image>
+                </view>
+                <view class="vc listFlex">
+                    <view class="but" style="background:#00B1F1;" wx:if="{{item.status==1}}">
+                      <label>正常结课</label>
+                    </view>
+                    <view class="but" style="background:#93D150;margin-top:20rpx;"
+                     bindtap='_courseDetails' wx:if="{{item.status==1}}" data-id="{{item.id}}"> 
+                         <label>详细情况</label>
+                    </view>
+                    <view class="but" style="background:#7030A1;" wx:if="{{item.status==2}}">
+                         <label>课程取消</label>
+                    </view>
+                </view>
+             </view> -->
+            <view  style="width:95%;margin-left:2.5%;margin-top:20rpx;">
+              <view  class="boxSizing cardContainer List" style="margin:0px;margin-top:10rpx;overflow:visible;width:100%;padding:0px;">
+                       <view class="vc listFlex" >
+                          <view>{{item.date}}</view> 
+                          <view style="margin-top:10rpx;">{{item.time}}</view> 
+                      </view>
+                      <view class="vc listFlex">
+                          <view>{{item.coursename1}}</view>
+                          <view style="margin-top:10rpx;">{{item.coursename2}}</view>
+                      </view>
+                      <view class="vc"  style="justify-content: center;">
+                        <image src="{{item.eventspic}}" style="width:80rpx;height:80rpx;"></image>
+                      </view>
+                      <view class="vc listFlex">
+                          <view class="but" style="background:#c00000;" wx:if="{{item.status==1}}">
+                            <label>正常结课</label>
+                          </view>
+                          <view class="but" style="background:#c00000;" wx:if="{{item.status==3}}">
+                            <label>正在上课</label>
+                          </view>
+                          <view class="but" style="background:#fff;color:#000;margin-top:20rpx;border:2rpx solid #c00000;"
+                          bindtap='_courseDetails' wx:if="{{item.status==1||item.status==3}}" data-id="{{item.id}}"> 
+                              <label>详细情况</label>
+                          </view>
+                          <view class="but" style="background:#c00000;" wx:if="{{item.status==2}}">
+                              <label>课程取消</label>
+                          </view>
+                      </view>
+                </view>
+            </view>
+        </block>
+    
+        
+     </scroll-view>
+</view>

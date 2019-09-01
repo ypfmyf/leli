@@ -1,0 +1,24 @@
+<view class="baseContainer"  style='width:{{width}}px;' wx:if="{{loaded}}">
+        <view class="imageTop">
+          <image src="{{blackpic}}"></image>
+        </view>
+        <view style="margin-top:320rpx;">
+          <block wx:for="{{noticeinfo}}" wx:key="index">
+            <view class="list_top boxSizing cardContainer" style="margin:20rpx 2.5%;height:100rpx;" bindtap='_noticedetail' data-id="{{item.id}}">
+              <view
+              style="flex:1;margin-left:20rpx;margin-right:20rpx;margin-top:20rpx;padding:20rpx 0;overflow:hidden;height:100rpx; line-height: 100rpx">
+                  <view style="font-size:30rpx;text-align:left; opacity:0.8;">{{item.brief}}</view>
+              </view>
+              <view style="height:100rpx; line-height: 100rpx;margin-right:20rpx;margin-top:20rpx;">
+                  <label style="font-size:30rpx;text-align: right;  opacity:0.8;">{{item.addtime}}</label>
+              </view>
+            </view>
+          </block>
+      
+        
+        
+        
+        </view>
+    
+
+</view>

@@ -1,0 +1,121 @@
+<view class='baseContainer' style='width:{{width}}px;' wx:if="{{loaded}}">
+  <!-- <view class='gradientsContainer fw' style='height:100px'></view>
+  <view style='position:absolute;top:60px;width:{{width}}px;' class='vc'>
+   <view  style='position:absolute;top:-42px;left:40%;width:70px;height:70px;border-radius:60px;'>
+       <image class='avatar'  src="{{photo}}" bindtap='_getUserInfo'></image>
+       <image src="../imgs/vip.png" class="vipImage" wx:if="{{isInstructor}}"></image>
+   </view>
+     <view class='cardContainer boxSizing vc' style="margin:0px;">
+     
+      <view class='hc' style='justify-content:center;width:{{width-40}}px;padding-top:25px;'>
+        <view class='f_15'>{{name}}</view>
+      </view>
+      <view class='vc f_15' style='width:{{width-40}}px;'>
+        {{msg1}}
+      </view>
+      <view class='vc f_15' style='width:{{width-40}}px;'>
+        {{msg2}}
+      </view>
+    </view> -->
+    <view class="index_top">
+        <view class="gradientsContainer"></view>
+        <view class="contet_list">
+            <view class="contet_list_left">
+                <view class="list_image">
+                   <image class='avatar'  src="{{photo}}"></image>
+                </view>
+                <view class="list_name">
+                   <label style="font-size:30rpx;">{{name}}</label>
+                </view>
+            </view>
+            <view class="contet_list_right">
+                 <view class="right_image">
+                    <image src="../../imgs/love.png" style="width:250rpx;height:60rpx;margin-right:0rpx;"></image>
+                 </view>
+                 <view style="font-size:26rpx;text-align: right; margin-bottom:20rpx;">
+                    <view>
+                       <label>{{msg1}}</label>
+                    </view>
+                    <view>
+                       <label>{{msg2}}</label>
+                    </view>
+                 
+                 </view>
+            
+            </view>
+        
+        </view>
+    </view>
+  
+    <view class='menuContainer fw' style="position: relative;top:0rpx;left:0rpx;">
+      <view class='hc menuContent' bindtap='_register'  wx:if="{{usertype==0}}">
+          <view class='hc'>
+            <image class='icon_20 unDo' src="../../imgs/phone.png"></image>
+            <label class='f_17' style='color:#c00000;margin-left:10px'>绑定手机号</label>
+          </view>
+          <image class='icon_15 unDo' src='../../imgs/i.png' mode='aspectFit'></image>
+        </view>
+        <view class='hc menuContent' bindtap='_hour'  wx:if="{{usertype==1}}">
+          <view class='hc'>
+            <image class='icon_20 unDo' src="../../imgs/time.png"></image>
+            <label class='f_17' style='color:#c00000;margin-left:10px'>扣课记录</label>
+          </view>
+          <image class='icon_15 unDo' src='../../imgs/i.png' mode='aspectFit'></image>
+        </view>
+        <view class='hc menuContent' bindtap='_appointment'  wx:if="{{usertype==1}}">
+          <view class='hc'>
+            <image class='icon_20 unDo' src="../../imgs/phone.png"></image>
+            <label class='f_17' style='color:#c00000;margin-left:10px'>我的报名</label>
+          </view>
+          <image class='icon_15 unDo' src='../../imgs/i.png' mode='aspectFit'></image>
+        </view>
+        <view class='hc menuContent' bindtap='linkBonus'  wx:if="{{usertype==1}}">
+          <view class='hc'>
+            <image class='icon_20 unDo' src="../../imgs/myline.png"></image>
+            <label class='f_17' style='color:#c00000;margin-left:10px'>成绩查询</label>
+            <label class='f_17' style='color:#c00000;margin-left:10px'>(暂未开放)</label>
+          </view>
+          <image class='icon_15 unDo' src='../../imgs/i.png' mode='aspectFit'></image>
+        </view>
+           <view class='hc menuContent' bindtap='_contact'  wx:if="{{usertype==3}}">
+          <view class='hc'>
+            <image class='icon_20 unDo' src="../../imgs/biao09.png"></image>
+            <label class='f_17' style='color:#c00000;margin-left:10px'>联系我们</label>
+          </view>
+          <image class='icon_15 unDo' src='../../imgs/i.png' mode='aspectFit'></image>
+        </view>
+        <!-- <view class='hc menuContent' bindtap='_finish'  wx:if="{{usertype==2}}">
+          <view class='hc'>
+            <image class='icon_20 unDo' src="../../imgs/time.png"></image>
+            <label class='f_17' style='color:#00467F;margin-left:10px'>结课查询</label>
+          </view>
+          <image class='icon_15 unDo' src='../../imgs/i.png' mode='aspectFit'></image>
+        </view> -->
+        <!-- <view class='hc menuContent' bindtap='_taking'  wx:if="{{usertype==2}}">
+          <view class='hc'>
+            <image class='icon_20 unDo' src="../../imgs/myline.png"></image>
+            <label class='f_17' style='color:#00467F;margin-left:10px'>带课查询</label>
+          </view>
+          <image class='icon_15 unDo' src='../../imgs/i.png' mode='aspectFit'></image>
+        </view> -->
+        <form bindsubmit="_finish" report-submit="true" wx:if="{{usertype==2}}">
+              <button form-type="submit" class='hc menuContent' hover-class="none" style=" background-color:#fff;width:94%;border-bottom: 1px solid gainsboro; border-radius: 0px;">
+                    <view class='hc'>
+                      <image class='icon_20 unDo' src="../../imgs/time.png"></image>
+                      <label class='f_17' style='color:#c00000;margin-left:10px'>结课查询</label>
+                    </view>
+                    <image class='icon_15 unDo' src='../../imgs/i.png' mode='aspectFit'></image>
+            </button>
+        </form>
+          <form bindsubmit="_taking" report-submit="true" wx:if="{{usertype==2}}">
+              <button form-type="submit" class='hc menuContent'  hover-class="none" style=" background-color:#fff;width:94%;border-radius: 0px;">
+                  <view class='hc'>
+                    <image class='icon_20 unDo' src="../../imgs/myline.png"></image>
+                    <label class='f_17' style='color:#c00000;margin-left:10px'>排课查询</label>
+                  </view>
+                  <image class='icon_15 unDo' src='../../imgs/i.png' mode='aspectFit'></image>
+            </button>
+        </form>
+     </view>
+  <!-- </view> -->
+</view> 

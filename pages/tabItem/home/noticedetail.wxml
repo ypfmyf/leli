@@ -1,0 +1,25 @@
+<view class="baseContainer"  style='width:{{width}}px;' wx:if="{{loaded}}">
+        <view class="imageTop">
+          <image src="{{noticeinfo.blackpic}}"></image>
+        </view>
+        <view style="margin-top:320rpx;">
+            <view class="list_top boxSizing cardContainer" style="margin:20rpx 2.5%;" bindtap='_noticedetail' data-id="{{item.id}}">
+              <view
+              style="width:90%;margin-left:5%; display: flex;flex-direction: column;margin-top:20rpx;padding:20rpx 0;">
+                <block>
+                <!-- <label style="padding-top:20rpx;font-size:30rpx;">{{noticeinfo.info}}</label>
+                <label style="font-size:30rpx;text-align: right; padding-top:40rpx;">{{noticeinfo.corpname}}</label>
+                <label style="font-size:30rpx;text-align: right;  opacity:0.8;">{{noticeinfo.addtime}}</label> -->
+                 <import src="../../../wxParse/wxParse.wxml"/> 
+                 <template is="wxParse" data="{{wxParseData:content.nodes}}"/>
+                </block>
+              </view>
+              <view style="width:90%;margin-left:5%;  display: flex;flex-direction: column;margin-top:40rpx;">
+                   <label style="font-size:30rpx;text-align: right; padding-top:40rpx;">{{noticeinfo.corpname}}</label>
+                   <label style="font-size:30rpx;text-align: right;  opacity:0.8;">{{noticeinfo.addtime}}</label>
+              </view>
+            </view>
+        </view>
+    
+
+</view>

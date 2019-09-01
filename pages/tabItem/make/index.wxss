@@ -1,0 +1,94 @@
+button{
+   background:#fff;
+   /* position:static; */
+   padding-left:0;
+   padding-right:0;
+   line-height:1.5;
+   text-align: left;
+}
+
+button::after{
+   border: none;
+}
+input{
+    outline:none;
+    border:none;
+    list-style: none;  
+}
+.buttonA-hove{
+   background:#fff;
+}
+.makeList{
+  background:#fff;
+  display: flex;
+  width:100%;
+
+}
+.topGU{
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%;
+  z-index:1000;
+}
+.course{
+   /* flex:0 0 25%; */
+   width:220rpx;
+   font-size:32rpx;
+   display: flex;
+   flex-direction: column;
+}
+.coach{
+  /* width:100rpx; */
+  display: flex;
+  flex-direction: column;
+}
+.coachName{
+  font-size:30rpx;
+  width:100%;
+  text-align: center;
+}
+.number{
+  display: flex;
+  flex-direction: column;
+  margin:0 20rpx;
+  font-size:30rpx;
+}
+.actionBtn{
+  font-size:34rpx;
+  width:120rpx;
+  border-radius: 10rpx;
+  height:60rpx;
+  /* margin-bottom:20rpx; */
+}
+.buttonClick{
+   display: flex;
+  flex-direction: column;
+}
+.touch-item {
+  /* font-size: 14px; */
+  display: flex;
+  justify-content: space-between;
+  /* border-bottom:1px solid #ccc; */
+  width:100%;
+  /* overflow: hidden */
+  /* margin-left:3%; */
+}
+
+.m_tiaoD{
+    animation:heartbeat 1s infinite;
+}
+@keyframes heartbeat {
+	0% {
+	transform:rotate(0deg) scale(0.8,0.8);
+	opacity:1;
+  }
+  25% {
+    transform:rotate(0deg) scale(1,1);
+    opacity:0.8;
+  }
+  100% {
+    transform:rotate(0deg) scale(0.8,0.8);
+    opacity:1;
+  }
+}

@@ -1,0 +1,130 @@
+<view  class="baseContainer" wx:if="{{loaded}}">
+   <view class="image">
+       <image src="{{moreinfo.coursephoto}}"></image>
+   </view>
+   <view class="hc" style="background:#fff;">
+       <view class="image_left">
+          <image src="{{moreinfo.coachphoto}}"></image>
+       </view>
+       <view class="name_right">
+          <view class="company">
+             <label style="font-size:36rpx;font-weight: bold;">{{moreinfo.name}}</label>
+          </view>
+          <view style="margin-top:20rpx;margin-right:20rpx;">
+            <label style="font-size:30rpx;">{{moreinfo.coachbrief}}</label>
+          </view>
+       </view>
+   </view>
+   <view style="background:#fff;margin-top:10rpx;padding:20rpx 0px;width:100%;">
+      <view style="width:95%;margin-left:2.5%;">
+        <label 
+        style="margin-right:30rpx;display: inline-block;font-size:28rpx;font-weight: bold;">时间</label> 
+        <label style="font-size:28rpx;">{{moreinfo.time}}</label> 
+      </view>
+      <view  style="width:95%;margin-left:2.5%;">
+        <label style="margin-right:30rpx;display: inline-block;font-size:28rpx;font-weight: bold;">地点</label> 
+        <label style="font-size:28rpx;">{{moreinfo.gym}}</label> 
+      </view>
+      <view  style="width:95%;margin-left:2.5%;">
+        <label style="margin-right:30rpx;display: inline-block;font-size:28rpx;font-weight: bold;">地址</label> 
+        <label style="font-size:28rpx;">{{moreinfo.address}}</label> 
+      </view>
+   </view>
+   <view style="width:95%;margin-left:2.5%;">
+     <!-- 课程简介 -->
+     <view  class="boxSizing cardContainer" style="margin:0px;margin-top:10rpx;overflow:visible;width:100%;padding:0px; ">
+      <view class="hc" style="margin-left:30rpx;">
+         <view>
+            <image src="../../imgs/biao01.png" style="width:50rpx;height:90rpx;"></image>
+         </view>
+         <view style="margin-left:10rpx;">
+           <label style="font-size:34rpx;font-weight: bold;">课程简介</label>
+         </view>
+      </view>
+      <view style="margin-left:30rpx;padding:0px 20rpx 20rpx 0px;font-size:28rpx;">{{moreinfo.brief}}</view>
+   </view>
+   <!-- 注意事项 -->
+  <view  class="boxSizing cardContainer" style="margin:0px;margin-top:10rpx;overflow:visible;width:100%;padding:0px; ">
+      <view class="hc" style="margin-left:30rpx;">
+         <view>
+            <image src="../../imgs/biao02.png" style="width:50rpx;height:90rpx;"></image>
+         </view>
+         <view style="margin-left:10rpx;">
+           <label  style="font-size:34rpx;font-weight: bold;">注意事项</label>
+         </view>
+      </view>
+      <view style="margin-left:30rpx;padding:0px 20rpx 20rpx 0px;font-size:28rpx;">{{moreinfo.important}}</view>
+   </view>
+     <!-- 运动装备 -->
+   <view  class="boxSizing cardContainer" style="margin:0px;margin-top:10rpx;overflow:visible;width:100%;padding:0px; ">
+      <view class="hc" style="margin-left:30rpx;">
+         <view>
+            <image src="../../imgs/biao03.png" style="width:50rpx;height:90rpx;"></image>
+         </view>
+         <view style="margin-left:10rpx;">
+           <label  style="font-size:34rpx;font-weight: bold;">运动装备</label>
+         </view>
+      </view>
+      <view style="margin-left:30rpx;padding:0px 20rpx 20rpx 0px;font-size:28rpx;">{{moreinfo.equip}}</view>
+   </view>
+    <!-- 温馨提示 -->
+   <view  class="boxSizing cardContainer" style="margin:0px;margin-top:10rpx;overflow:visible;width:100%;padding:0px; ">
+      <view class="hc" style="margin-left:30rpx;">
+         <view>
+            <image src="../../imgs/biao04.png" style="width:50rpx;height:90rpx;"></image>
+         </view>
+         <view style="margin-left:10rpx;">
+           <label  style="font-size:34rpx;font-weight: bold;">温馨提示</label>
+         </view>
+      </view>
+      <view style="margin-left:30rpx;padding:0px 20rpx 20rpx 0px;font-size:28rpx;">{{moreinfo.warm}}</view>
+   </view>
+    <!-- 取消原因 -->
+   <view  class="boxSizing cardContainer" style="margin:0px;margin-top:10rpx;overflow:visible;width:100%;padding:0px; " 
+     wx:if="{{moreinfo.status==5}}">
+      <view class="hc" style="margin-left:30rpx;">
+         <view style="height:90rpx;display:flex;align-items: center;">
+            <image src="../../imgs/biao05.png" style="width:50rpx;height:50rpx;"></image>
+         </view>
+         <view style="margin-left:10rpx;">
+           <label  style="font-size:34rpx;font-weight: bold;">取消原因</label>
+         </view>
+      </view>
+      <view style="margin-left:30rpx;padding:0px 20rpx 20rpx 0px;font-size:28rpx;">{{moreinfo.cancelinfo}}</view>
+   </view>
+  </view>
+  <view style="{{moreinfo.status>0&&usertype!=3? 'width:100%;height:110rpx;':'width:100%;height:20rpx;'}}"></view>
+
+  <!-- 固定点击按钮 -->
+  <block wx:if="{{usertype!=2}}">
+    <form bindsubmit="_signClcik01" report-submit="true" wx:if="{{moreinfo.status==1}}">
+         <button form-type="submit" class="button_bottom" hover-class="none" wx:if="{{moreinfo.status==1}}">
+                    <label>立即报名</label>
+         </button>
+     </form>
+      <form bindsubmit="_signClcik02" report-submit="true" wx:if="{{moreinfo.status==2}}">
+         <button form-type="submit" class="button_bottom" hover-class="none" wx:if="{{moreinfo.status==2}}">
+                    <label>取消报名</label>
+         </button>
+     </form>
+     <form bindsubmit="_signClcik03" report-submit="true" wx:if="{{moreinfo.status==3}}">
+         <button form-type="submit" class="button_bottom" hover-class="none" wx:if="{{moreinfo.status==3}}">
+                    <label>排队通知</label>
+         </button>
+     </form>
+      <view class="button_bottom" wx:if="{{moreinfo.status==4}}">
+        <label>已排队</label>
+      </view>
+      <view class="button_bottom" wx:if="{{moreinfo.status==5}}">
+        <label>课程已取消</label>
+      </view>
+       <form bindsubmit="_signClcik06" report-submit="true" wx:if="{{moreinfo.status==6}}">
+         <button form-type="submit" class="button_bottom" hover-class="none" wx:if="{{moreinfo.status==6}}">
+                    <label>临时报名</label>
+         </button>
+       </form>
+  </block>
+ 
+
+
+</view>

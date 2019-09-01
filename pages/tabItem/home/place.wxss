@@ -1,0 +1,32 @@
+.placeList{
+  width:100%;
+  background:#fff;
+  margin-top:20rpx;
+  padding:20rpx 0;
+}
+.List{
+  width:95%;
+  /* margin-left:2.5%; */
+  display: flex;
+  margin:20rpx 2.5%;
+  font-size:32rpx;
+}
+.list_left{
+    width:200rpx;
+    display: flex;
+    flex-direction: column;
+    margin-top:10rpx;
+}
+.list_right{
+  margin:20rpx 0rpx 20rpx 20rpx;
+  font-size:30rpx;
+  
+}
+.name_bottom{
+  /* height:60rpx; */
+  margin-bottom:20rpx;
+  width:100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
